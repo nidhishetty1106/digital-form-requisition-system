@@ -16192,15 +16192,15 @@ footer .pull-center {
 }
 
 .card {
-    border-bottom-color: #695555;
-  border-right-color: #695555;
+    border-bottom:1px solid black;
+  border-right:1px solid black;
   margin-bottom: 30px;
   margin-top: 30px;
   border-radius: 6px;
   color: rgba(0, 0, 0, 0.87);
   background: #fff;
   width: 100%;
-  box-shadow: 11px 11px 8px 0px rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  box-shadow:8px 7px 11px 1px #2125295c, 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
 }
 
 .card .card-category:not([class*="text-"]) {
@@ -16425,6 +16425,10 @@ footer .pull-center {
 .card [class*="header-"],
 .card[class*="bg-"] {
   color: #fff;
+  border-bottom: 1px solid #0b62a7;
+  border-right: 1.5px solid #0b62a7;
+
+
 }
 
 .card [class*="header-"] .card-title a,
