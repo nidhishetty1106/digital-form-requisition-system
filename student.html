@@ -65,34 +65,65 @@
 <br><br>
 <!-- card and tabs for student details  -->
 <div class="card card-nav-tabs card-plain" style="width: 80%; margin: auto;">
-    <div class="card-header card-header-danger">
-        <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
-        <div class="nav-tabs-navigation">
-            <div class="nav-tabs-wrapper">
-                <ul class="nav nav-tabs" data-tabs="tabs">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#newapply" data-toggle="tab">Apply</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#applied" data-toggle="tab">View Applied</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div><div class="card-body ">
-        <div class="tab-content text-center">
-            <div class="tab-pane active" id="newapply">
-                <p>put the form and buttons here</p>
+    <div class="card-header card-header-default">
+          <!-- Button trigger modal -->
+        <ul class="nav nav-tabs" data-tabs="tabs">
+            <li class="nav-item">
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target=".bd-example-modal-lg">
+  Apply
+</button>
+</li>
+<li class="nav-item" style="margin-left:20px;">
+<button type="button" class="btn btn-danger" data-toggle="modal" data-target=".bd-example-modal-lg1">
+View Applications
+</button>
+</li>
+</ul>
 
-              <button type="button" class="btn btn-success">Submit</button>
-            </div>
-            <div class="tab-pane" id="applied">
-                <p>Put the views and buttons from db here</p>
-                <button type="button" class="btn btn-info">OK</button>
-            </div>
-        </div>
+<!-- Modal for Apply-->
+<div class="modal fade bd-example-modal-lg" id="apply" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Requisition Form</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="color:black;">
+        Hii this is the modal body where i need to put a form.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-danger">Apply</button>
+      </div>
     </div>
   </div>
+</div>
+    </div>
+  </div>
+
+  <!-- Modal for view applications-->
+  <div class="modal fade bd-example-modal-lg1" id="viewapplied" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Previous Applications</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="color:black;">
+          Hii this is the modal body where i need to put dynamic generated data and dynamic cards generation.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info" data-dismiss="modal">OK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+      </div>
+    </div>
 <!-- end of card of student-->
 </body>
 </html>

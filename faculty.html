@@ -57,42 +57,48 @@
 <!-- Student info div with logout btn -->
 <div class="card" style="width: 80%; margin:auto;">
   <div class="card-body">
-  <span style="margin-left: 20px; margin-top: 20px;">Welcome, </span><button type="button" class="btn btn-danger" style="float: right; margin-right: 20px;">Logout</button><br>
-  <br><span style="margin-left: 50px;">Name : </span> <!-- insert from db -->  <span style="margin-right: 600px; float:right;">Dept : </span><!-- insert from db -->
-  <br><br><span style="margin-left: 50px;">FacID : </span><!-- insert from db -->
+  <span style="margin-left: 20px; margin-top: 20px;">Welcome, </span>
+  <button type="button" class="btn btn-danger" data-toggle="modal" data-target=".bd-example-modal-lg1" style="float: right; margin-right: 20px; margin-top:30px">
+  Previous Forms
+  </button><br>
+  <br><span style="margin-left: 50px;">Name : </span> <!-- insert from db -->  <span style="margin-right: 600px; float:right;">Dept : </span><!-- insert from db --><br>
+  <br><br><span style="margin-left: 50px;">FacID : </span><!-- insert from db --><button type="button" class="btn btn-danger" style="float: right; margin-right: 40px; margin-bottom:20px;">Logout</button>
 </div>
 </div>
 <br><br>
-<!-- card and tabs for student details  -->
-<div class="card card-nav-tabs card-plain" style="width: 80%; margin: auto;">
-    <div class="card-header card-header-danger">
-        <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
-        <div class="nav-tabs-navigation">
-            <div class="nav-tabs-wrapper">
-                <ul class="nav nav-tabs" data-tabs="tabs">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#newapply" data-toggle="tab">Requisitions</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#applied" data-toggle="tab">View Previous</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div><div class="card-body ">
-        <div class="tab-content text-center">
-            <div class="tab-pane active" id="newapply">
-                <p>Get the data from the db and put here. each shld have approve or reject button dynamically generated. Also each entry is a card type. so dynamic cards to be generated.</p>
+<!-- card and tabs for student details applications -->
 
-              <button type="button" class="btn btn-success">OK</button>
-            </div>
-            <div class="tab-pane" id="applied">
-                <p>Previously approved or rejected cards to be here. also cards from taken from DB</p>
-                <button type="button" class="btn btn-info">OK</button>
-            </div>
+          <!-- Dynamic Cards. If exists: Select the rows of data from db. count the no of rows and generate so many cards by placing in loop. -->
+      <div class="card card-nav-tabs" style="margin:auto; width:80%; ">
+      <h4 class="card-header card-header-info">Featured</h4>
+      <div class="card-body">
+        <h4 class="card-title">Special title treatment</h4>
+        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <a href="#0" class="btn btn-primary">Go somewhere</a>
+      </div>
+      </div>
+
+      <!-- end of card of student-->
+  <!-- Modal for view applications-->
+  <div class="modal fade bd-example-modal-lg1" id="viewapplied" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Previous REquisitions</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
         </div>
+        <div class="modal-body" style="color:black;">
+          Previously approved or rejected cards to be here. also cards from taken from DB
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-info" data-dismiss="modal">OK</button>
+        </div>
+      </div>
     </div>
   </div>
-<!-- end of card of student-->
+    <!-- End of fn-->
+
 </body>
 </html>
