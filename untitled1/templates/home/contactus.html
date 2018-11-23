@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+      {% load staticfiles %}
+      <link rel="stylesheet" type="text/css" href="{% static 'home/material-kit.css' %}"
+       <script src="assets/js/core/jquery.min.js" type="text/javascript"></script>
+    <script src="assets/js/core/popper.min.js" type="text/javascript"></script>
+    <script src="assets/js/core/bootstrap-material-design.min.js" type="text/javascript"></script>
+    <script src="assets/js/plugins/moment.min.js"></script>
+    <title>Contact Us </title>
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </head>
+  <body>
+
+    <!-- Nav Bar at the top-->
+    <nav class="navbar sticky-top navbar-expand-lg bg-dark">
+     <div class="container">
+		 <div>
+		   <a class="navbar-brand" href="#"><b>BMSCE</b></a>
+		 </div>
+     <div class="collapse navbar-collapse justify-content-end" style="width: 50%">
+
+       <a class="navbar-brand" href="#">Student Requisitions form system</a>
+
+     </div>
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-bar navbar-kebab"></span>
+			<span class="navbar-toggler-bar navbar-kebab"></span>
+			<span class="navbar-toggler-bar navbar-kebab"></span>
+		</button>
+
+		<div class="collapse nav navbar-collapse justify-content-end" id="navbarNav">
+		  <ul class="navbar-nav">
+			<li class="nav-item ">
+			  <a class="nav-link" href="/home/">Home </a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="/home/about">About<span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#/home/department">Departments</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="/home/contactus">Contact Us</a>
+			</li>
+		  </ul>
+		</div>
+     </div>
+    </nav>
+<!-- End of the nav bar-->
+
+  <section  style="background: #eeeeee;">
+  <div class="container">
+    <div class="row" style="margin:0px;">
+      <div class=" col-lg-12 text-center">
+        <h2 class="title" style="text-align:center;">Our Creative Team!</h2></br>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-3">
+      <div class="card text-center" style="padding: 10px;margin: 2px">
+          <div style="border-radius: 50%;padding: 0px;padding:10px;margin: auto;">
+            {% load static %}
+            <img src="{% static "home/img/NIDHI.jpg" %}" class="pic img-raised img-circle" alt="" style="width:150px;height: 150px;border-radius:50%;top:50%;border-bottom: 2px solid black;border-right: 1px solid black;">
+          </div>
+
+          <h5 style="margin: 0px;color: blue;"><b>SHRINIDHI P SHETTY</b></h5><hr style="color: black;">
+          <p> <b>1BM16CS104</br>
+            nidhi.shetty.1106@gmail.com</br>
+          9482481106</br></b></p>
+
+        </div>
+      </div>
+      <div class="col-sm-3">
+      <div class="card text-center" style="padding: 10px;margin: 2px">
+          <div style="border-radius: 50%;padding: 0px;padding:10px;margin: auto;">
+            <img src="{% static "home/img/suhas.jpg" %}" class="pic img-raised img-circle" alt="" style="width:150px;height: 150px;border-radius:50%;border-bottom: 2px solid black;border-right: 1px solid black;">
+          </div>
+
+          <h5 style="margin: 0px;color: blue;"><b>SUHAS M SURESH</b></h5><hr style="color: black;">
+          <p> <b>1BM16CS109</br>
+            suhasagasthya@gmail.com</br>
+          9663623383</br></b></p>
+
+        </div>
+      </div>
+      <div class="col-sm-3">
+      <div class="card text-center" style="padding: 10px;margin: 2px">
+          <div style="border-radius: 50%;padding: 0px;padding:10px;margin: auto;">
+            <img src="{% static "home/img/vishvas.jpg" %}" class="pic img-raised img-circle" alt="" style="width:150px;height: 150px;border-radius:50%;border-bottom: 2px solid black;border-right: 1px solid black;">
+          </div>
+
+          <h5 style="margin: 0px;color: blue;"><b>T A VISHWAS</b></h5><hr style="color: black;">
+          <p> <b>1BM16CS115</br>
+            vishwaskashyap6@gmail.com</br>
+          9449934841</br></b></p>
+
+        </div>
+      </div>
+      <div class="col-sm-3">
+      <div class="card text-center" style="padding: 10px;margin: 2px">
+          <div style="border-radius: 50%;padding: 0px;padding:10px;margin: auto;">
+            <img src="{% static "home/img/vatsav.jpg" %}" class="pic img-raised img-circle" alt="" style="width:150px;height: 150px;border-radius:50%;border-bottom: 2px solid black;border-right: 1px solid black;">
+          </div>
+
+          <h5 style="margin: 0px;color: blue;"><b>VATSAV S M</b></h5><hr style="color: black;">
+          <p> <b>1BM16CS123</br>
+            1bm16cs123@bmsce.ac.in</br>
+          9740858529</br></b></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  </body>
+</html>

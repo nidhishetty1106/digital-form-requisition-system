@@ -1,0 +1,172 @@
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    {% load staticfiles %}
+      <link rel="stylesheet" type="text/css" href="{% static 'home/material-kit.css' %}"
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  </head>
+  <body>
+{% block body %}
+    <!-- Nav Bar at the top-->
+    <nav class="navbar sticky-top navbar-expand-lg bg-dark">
+     <div class="container">
+		 <div>
+		   <a class="navbar-brand navbar-left" href="#">BMSCE</a>
+		 </div>
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-bar navbar-kebab"></span>
+			<span class="navbar-toggler-bar navbar-kebab"></span>
+			<span class="navbar-toggler-bar navbar-kebab"></span>
+		</button>
+
+		<div class="collapse nav navbar-collapse justify-content-end" id="navbarNav">
+		  <ul class="navbar-nav">
+        <li class="nav-item">
+          <span class="navbar-text">
+                   Student Requisitions
+    </span>
+    </li>
+			<li class="nav-item active">
+			  <a class="nav-link" href="/home/">Home <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="/home/{{ user.id }}/about">About</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#">Departments</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="/home/{{ user.id }}/contactus">Contact Us</a>
+			</li>
+		  </ul>
+      </div>
+		</div>
+    </nav>
+<!-- End of the nav bar-->
+<!-- Student info div with logout btn -->
+<div class="card" style="width: 80%; margin:auto;">
+  <div class="card-body">
+  <span style="margin-left: 20px; margin-top: 20px;">Welcome, </span><a  class="btn btn-danger" style="float: right; margin-right: 20px;" href='/home/'>Logout</a><br>
+  <br><span style="margin-left: 50px;">Name : </span> {% for i in user.student_set.all %}{{ i.name }}{% endfor %}
+      <!-- insert from db -->  <span style="margin-right: 600px; float:right;">Branch :{% for i in user.student_set.all %}{{ i.branch }}{% endfor %} </span><!-- insert from db -->
+  <br><br><span style="margin-left: 55px;">USN : {% for i in user.student_set.all %}{{ i.usn }}{% endfor %}</span><!-- insert from db -->
+</div>
+</div>
+<br><br>
+<!-- card and tabs for student details  -->
+<div class="card card-nav-tabs card-plain" style="width: 80%; margin: auto;">
+    <div class="card-header card-header-danger">
+        <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+        <div class="nav-tabs-navigation">
+            <div class="nav-tabs-wrapper">
+               <ul class="nav nav-tabs" data-tabs="tabs" id="mytabs">
+                    <li class="nav-item">
+                        <a class="nav-link active  " href="/home/loginuser/apply" data-toggle="tab">Apply</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/home/loginuser/applied" data-toggle="tab">View Applied</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+   <!-- </div><div class="card-body ">
+        <div class="tab-content text-center">
+            <div class=" collapse in" id="newapply">
+
+                    <form name="details" action="" method="POST" >
+
+                        <legend>
+                         <strong style="color:white;">Name</strong>
+                        </legend>
+                        <label id="name" class="form-element"><input type="text" name="name" required ><br/><br/></label>
+                        <legend>
+                         <strong style="color:white;">USN</strong>
+                        </legend>
+                        <label id="usn" class="form-element"><input type="text" name="usn" id="usn" maxlength="10" required /><br/><br/></label>
+                        <br/>
+                        <legend>
+                         <strong style="color:white;">Semester</strong>
+                        </legend>
+                        <label id="sem"><select name="sem" required>
+                                <option value="I">I</option>
+                                <option value="II">II</option>
+                                <option value="III">III</option>
+                                <option value="IV">IV</option>
+                                <option value="V">V</option>
+                                <option value="VI">VI</option>
+                                <option value="VII">VII</option>
+                                <option value="VIII">VIII</option>
+                             </select></label><br/>
+                        <br/>
+                        <legend>
+                         <strong style="color:white;">Branch</strong>
+                        </legend>
+                        <label id="branch"><select name="branch" required>
+                                 <option value="cse">CSE</option>
+                                 <option value="ise">ISE</option>
+                                 <option value="ece">ECE</option>
+
+                              </select></label><br/>
+                        <br/>
+                         <legend>
+                         <strong style="color:white;">Issue</strong>
+                        </legend>
+                        <input type="text" />
+
+
+
+                        <input  type="submit" value="Submit" />
+                        <input  type="reset" value="Clear" />
+                        </form>
+                </p>
+
+              <button type="button" class="btn btn-success">Submit</button>
+            </div>
+            <div class=" collapse " id="applied">
+                <p>{% for i in user.student_set.all %}{{ i.issue }}{% endfor %}</p>
+                <button type="button" class="btn btn-info">OK</button>
+            </div>
+        </div>
+    </div>
+  </div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#mytabs').tab()
+
+
+    });
+</script>-->
+</div><<div class="card bg-dark text-white cols"style="width:40%">
+    <div class="card-body" >
+        <div class="tab-content text-center" >
+    <form name="details" action="{% url 'home:issuecreate' user.id %}" method="POST" class="form" >
+        {% csrf_token %}
+        {% for field in form %}
+            <div class="form-group">
+                <span class="text-danger">{{ field.errors }}</span>
+                <label class="control-label" >{{ field.label_tag }}</label>
+                {{ field }}
+
+            </div>
+        {% endfor %}
+     <input type="submit" value="submit">
+    </form>
+
+</div>
+</div>
+
+
+
+  {% endblock %}
+
+  </body>
+</html>
