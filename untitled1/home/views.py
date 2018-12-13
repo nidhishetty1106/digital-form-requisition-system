@@ -33,7 +33,7 @@ class login_form(View):
             if user.is_active:
                 login(request, user)
                 id = str(request.user.id)
-                return redirect('/home/loginuser/')
+                return redirect('/home/'+id+'/' )
             else:
                 return render(request, 'home/login_form.html', {'error_message': 'Your account has been disabled'})
         else:
@@ -46,11 +46,11 @@ def logout_user(request):
     context = {
         "form": form,
     }
-    return render(request, 'home/login_form.html', context)
+    return render(request, 'home/logout.html', context)
 
 
 
-def index(request):
+def index(request,id):
 
     user=User.objects.get(username=request.user)
 
@@ -79,13 +79,13 @@ def loginabout(request, id):
         return render(request, 'home/login_form.html')
     return render(request, 'home/loginabout.html', )
 
-
+@login_required
 def logincontactus(request, id):
     if not request.user.is_authenticated:
         return render(request, 'home/login_form.html')
     return render(request, 'home/logincontactus.html')
 
-
+@login_required
 def loginhome(request, id):
     if not request.user.is_authenticated:
         return render(request, 'home/login_form.html')

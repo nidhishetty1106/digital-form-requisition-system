@@ -52,7 +52,7 @@
 <!-- Student info div with logout btn -->
 <div class="card" style="width: 80%; margin:auto;">
   <div class="card-body">
-  <span style="margin-left: 20px; margin-top: 20px;">Welcome, </span><a  class="btn btn-danger" style="float: right; margin-right: 20px;" href='/home/'>Logout</a><br>
+  <span style="margin-left: 20px; margin-top: 20px;">Welcome, </span><a  class="btn btn-danger" style="float: right; margin-right: 20px;" href='{% url 'home:logout' %}'>Logout</a><br>
   <br><span style="margin-left: 50px;">Name : </span> {% for i in user.student_set.all %}{{ i.name }}{% endfor %}
       <!-- insert from db -->  <span style="margin-right: 600px; float:right;">Branch :{% for i in user.student_set.all %}{{ i.branch }}{% endfor %} </span><!-- insert from db -->
   <br><br><span style="margin-left: 55px;">USN : {% for i in user.student_set.all %}{{ i.usn }}{% endfor %}</span><!-- insert from db -->

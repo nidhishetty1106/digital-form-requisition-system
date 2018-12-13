@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <!-- CSS Files -->
+    {% load staticfiles %}
+      <link rel="stylesheet" type="text/css" href="{% static 'home/material-kit.css' %}"
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <title>About</title>
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+  </head>
+  <body>
+
+    <!-- Nav Bar at the top-->
+     <nav class="navbar sticky-top navbar-expand-lg bg-dark">
+     <div class="container">
+		 <div>
+		   <a class="navbar-brand" href="#"><b>BMSCE</b></a>
+		 </div>
+     <div class="collapse navbar-collapse justify-content-end" style="width: 50%">
+
+       <a class="navbar-brand" href="#">Student Requisitions form system</a>
+
+     </div>
+
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-bar navbar-kebab"></span>
+			<span class="navbar-toggler-bar navbar-kebab"></span>
+			<span class="navbar-toggler-bar navbar-kebab"></span>
+		</button>
+
+		<div class="collapse nav navbar-collapse justify-content-end" id="navbarNav">
+		  <ul class="navbar-nav">
+			<li class="nav-item active">
+			  <a class="nav-link" href="/home/">Home </a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="/home/about">About<span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="/home/department">Departments</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="/home/contactus">Contact Us</a>
+			</li>
+		  </ul>
+		</div>
+     </div>
+    </nav>
+<!-- End of the nav bar-->
+<div class="row">
+<div class="col-md-4 "></div>
+<div class="col-md-4 text-center">
+  <h3 class="text-center">You logged out successfully </h3>
+
+  <a class=" btn btn-primary " style="" href="/home/">Login</a>
+</div>
+</div>
+</body>
+</html>
